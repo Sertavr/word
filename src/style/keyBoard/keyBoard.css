@@ -1,0 +1,45 @@
+/* .key-board {
+  display: flex;
+  
+  align-items: center;
+} */
+.rowKeyBoard {
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.key {
+  display: flex;
+  background-color: #bbb;
+  width: 10%;
+  height: 50px;
+  margin: 3px;
+  padding: 0 3px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  transition: 0.2s;
+}
+.key:hover:not(.present-key, .absent-key, .correct-key) {
+  background-color: #949494;
+  transition: 0.3s;
+}
+
+.present-key {
+  background-color: #c9b458;
+}
+.absent-key {
+  background-color: #787c7e;
+}
+.key.correct-key {
+  background-color: #6aaa64;
+}
+.present-key,
+.present-key,
+.absent-key {
+  color: #ffffff;
+}

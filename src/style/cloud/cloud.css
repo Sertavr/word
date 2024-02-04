@@ -1,0 +1,62 @@
+.cloud {
+  background-color: #2663a8;
+  width: 100px;
+  height: 100px;
+  border-radius: 0 0 50% 50%;
+  position: absolute;
+}
+.one {
+  transform: scale(3.5, 2);
+  top: -10%;
+  box-shadow: 0 0 3px 1px rgba(18, 18, 48, 0.9);
+  z-index: 1;
+}
+.two {
+  left: 50%;
+  top: -15%;
+  transform: translateX(-50%);
+  transform: scale(3.5, 3);
+  box-shadow: 2px 0 3px 5px rgba(18, 18, 48, 0.2);
+  z-index: 2;
+}
+.three {
+  right: 10%;
+  top: -10%;
+  transform: scale(3.5, 2);
+  box-shadow: 0 0 3px 5px rgba(18, 18, 48, 0.2);
+}
+.four {
+  left: 70%;
+  top: -15%;
+  transform: translateX(-50%);
+  transform: scale(3.5, 3);
+  box-shadow: 2px 0 3px 5px rgba(18, 18, 48, 0.2);
+  z-index: 2;
+}
+.five {
+  left: 10%;
+  top: -10%;
+  transform: scale(3.5, 2);
+  box-shadow: 0 0 3px 5px rgba(18, 18, 48, 0.2);
+  z-index: 2;
+}
+.container-anime {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.beforeRain{
+  display: none;
+}
+.rain{
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    position: absolute;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(500px);
+    }
+}

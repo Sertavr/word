@@ -1,0 +1,27 @@
+.game {
+  max-width: 500px;
+margin: auto;
+  padding-top: 50px;
+}
+.beforSun{
+  display: none;
+}
+.sun {
+  font-size: 100%;
+  color: #e1e42f;
+  position: absolute;
+  font-size: 150px;
+  left: 50%;
+  margin-left: -75px;
+  top: 30%;
+  margin-top: -75px;
+  z-index: 1;
+  transition: opacity 4s;
+  animation: sunGo 3s linear infinite;
+}
+
+@keyframes sunGo {
+  to {
+    transform: rotate(360deg);
+  }
+}
