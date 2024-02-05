@@ -6,16 +6,23 @@ import KeyBoard from "./copmonents/keyboard/KeyBoard";
 import { word } from "./constants/word/Word";
 import Clouds from "./copmonents/cloud/Clouds";
 import { BsFillSunFill } from "react-icons/bs";
+import { setCookie, getCookie } from "./cookie/cookie";
 
 export const AnswersContecst = createContext();
 
 function App() {
-  const [answers, setAnswers] = useState(
-    new Array(6).fill({
+const initialAnswers = getCookie("cAnswers")
+  ? JSON.parse(getCookie("cAnswers"))
+  : new Array(6).fill({
       row: new Array(5).fill(""),
       completed: false,
-    })
+    });
+
+
+  const [answers, setAnswers] = useState(
+    initialAnswers
   );
+
   const [isShakeRow, setIsShakeRow] = useState(false);
   const [isGameEnd, setIsGameEnd] = useState(false);
 
@@ -25,18 +32,30 @@ function App() {
     });
     if (answers.at(-1).completed && answers.at(-1).row.join("") !== word)
       setIsGameEnd(true);
+
+    //Cookie
+    let dataAnswers = JSON.stringify(answers);
+    setCookie("cAnswers", dataAnswers);
   }, [answers]);
 
   const styleSun = {};
-  styleSun.opacity = isGameEnd && answers.findIndex(({ row }) => row.join("") === word) !== -1 ? 0.7 : 0;
-  
+  styleSun.opacity =
+    isGameEnd && answers.findIndex(({ row }) => row.join("") === word) !== -1
+      ? 0.7
+      : 0;
+
   return (
     <AnswersContecst.Provider value={answers}>
-      <div className="game">
+      <div
+        className="game"
+      >
         <Header />
         <Clouds isGameEnd={isGameEnd} />
 
-        <BsFillSunFill className={isGameEnd ? "sun" : 'beforSun'} style={styleSun} />
+        <BsFillSunFill
+          className={isGameEnd ? "sun" : "beforSun"}
+          style={styleSun}
+        />
 
         <Board
           answers={answers}
