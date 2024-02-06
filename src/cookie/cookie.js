@@ -1,7 +1,7 @@
 const setCookie = (name, data) => {
   const date = new Date();
   const endTime = new Date(
-    `${date.getFullYear()}-${date.getMonth()}-${date.getDate} 23:59:59`
+    `${date.getFullYear()}-${date.getMonth()}-${date.getDate()} 23:59:59`
   );
   let updateCookie = `${encodeURIComponent(name)} = ${encodeURIComponent(
     data
