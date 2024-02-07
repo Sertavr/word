@@ -1,9 +1,20 @@
 .game {
   max-width: 500px;
-margin: auto;
+  margin: auto;
   padding-top: 50px;
 }
-.beforSun{
+.timer {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  z-index: 1;
+  background-color: #fff;
+  background-image: url("../../image/tree.jpg");
+  background-repeat: no-repeat;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+.beforSun {
   display: none;
 }
 .sun {
@@ -24,4 +35,28 @@ margin: auto;
   to {
     transform: rotate(360deg);
   }
+}
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close:hover {
+  transform: scale(1.3);
+}
+.next-time {
+  position: absolute;
+  bottom: 15%;
+  right: 0;
+  width: 70%;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: baseline;
+  color: #461717ee;
 }

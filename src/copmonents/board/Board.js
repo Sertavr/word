@@ -49,7 +49,7 @@ const Board = ({ answers, isShakeRow, setIsShakeRow, isGameEnd }) => {
   ];
 
   return (
-    <div className="broad">
+    <div className="board">
       {messages.map((message, ind) => (
         <div
           key={message}
