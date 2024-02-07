@@ -4,14 +4,16 @@
   padding-top: 50px;
 }
 .timer {
+  display: none;
   position: absolute;
   left: 50%;
   top: 20%;
   transform: translateX(-50%);
   z-index: 1;
   background-color: #fff;
-  background-image: url("../../image/tree.jpg");
+  background-image: url("../../../public/image/tree.jpg");
   background-repeat: no-repeat;
+  background-size:50%;
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
 }
 .beforSun {

@@ -1,4 +1,5 @@
 const funcTimer = (show, hidden) => {
+  hidden.current.style.display = "block";
   const dateNow = new Date();
   const dateEnd = new Date(
     `${dateNow.getFullYear()}-${
