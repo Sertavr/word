@@ -1,5 +1,5 @@
 const funcTimer = (show, hidden) => {
-  hidden.current.style.display = "block";
+  setTimeout(()=>hidden.current.style.opacity = 1, 4000)
   const dateNow = new Date();
   const dateEnd = new Date(
     `${dateNow.getFullYear()}-${
@@ -18,7 +18,7 @@ const funcTimer = (show, hidden) => {
     const seconds = (differenceInSec % 60).toFixed().padStart(2, 0);
 
     show.current.textContent = `НАСТУПНЕ СЛОВО: ${hours}:${minutes}:${seconds}`;
-    if (Math.trunc(differenceInSec) === 0) hidden.current.style.display = "none";
+    if (Math.trunc(differenceInSec) === 0) hidden.current.style.opacity = 0;
   };
 
   const timer = setInterval(tick, 1000);

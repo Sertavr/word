@@ -4,7 +4,7 @@
   padding-top: 50px;
 }
 .timer {
-  display: none;
+  opacity: 0;
   position: absolute;
   left: 50%;
   top: 20%;
@@ -14,7 +14,8 @@
   background-image: url("../../../public/image/tree.jpg");
   background-repeat: no-repeat;
   background-size:50%;
-  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px 5px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.4s;
 }
 .beforSun {
   display: none;
