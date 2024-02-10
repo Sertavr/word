@@ -10,13 +10,7 @@ const setCookie = (name, data) => {
 };
 
 function getCookie(name) {
-  /* let matches = document.cookie.match(
-    new RegExp(
-      "(?:^|; )" +
-        name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") +
-        "=([^;]*)"
-    )
-  ); */
+ 
   let copyCookie = document.cookie;
 
   let indexName = copyCookie.lastIndexOf(`${name}=`);
@@ -24,7 +18,6 @@ function getCookie(name) {
     let strData = decodeURIComponent(
       copyCookie.slice(indexName + `${name}=`.length)
     );
-    //return matches ? decodeURIComponent(matches[1]) : undefined;
     return strData;
   }
   return "";
