@@ -6,7 +6,6 @@ const funcTimer = (show, hidden) => {
       dateNow.getMonth() + 1
     }-${dateNow.getDate()} 23:59:59`
   );
-
   let differenceInSec = (dateEnd - dateNow) / 1000;
 
   const tick = () => {
