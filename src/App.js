@@ -22,6 +22,8 @@ function App() {
 
   const [answers, setAnswers] = useState(initialAnswers);
 
+  const [isDarck, setDarck] = useState(false);
+
   const [isShakeRow, setIsShakeRow] = useState(false);
   const [isGameEnd, setIsGameEnd] = useState(false);
 
