@@ -63,3 +63,9 @@
   vertical-align: baseline;
   color: #461717ee;
 }
+.general-container{
+ 
+}
+.general-container.dark{
+  background-color: #202020;
+}

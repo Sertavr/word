@@ -22,7 +22,7 @@ function App() {
 
   const [answers, setAnswers] = useState(initialAnswers);
 
-  const [isDarck, setDarck] = useState(false);
+  const [isDark, setDark] = useState(true);
 
   const [isShakeRow, setIsShakeRow] = useState(false);
   const [isGameEnd, setIsGameEnd] = useState(false);
@@ -62,32 +62,34 @@ function App() {
 
   return (
     <AnswersContecst.Provider value={answers}>
-      <div className="game" ref={refGame}>
-        <Header />
-        <Clouds isGameEnd={isGameEnd} />
+      <div className={`general-container ${isDark ? 'dark' : ''}`}>
+        <div className="game" ref={refGame}>
+          <Header />
+          <Clouds isGameEnd={isGameEnd} />
 
-        <BsFillSunFill
-          className={isGameEnd ? "sun" : "beforSun"}
-          style={styleSun}
-        />
+          <BsFillSunFill
+            className={isGameEnd ? "sun" : "beforSun"}
+            style={styleSun}
+          />
 
-        <Board
-          answers={answers}
-          isShakeRow={isShakeRow}
-          setIsShakeRow={setIsShakeRow}
-          isGameEnd={isGameEnd}
-        />
-        <KeyBoard
-          answers={answers}
-          setAnswers={setAnswers}
-          setIsShakeRow={setIsShakeRow}
-          isGameEnd={isGameEnd}
-        />
-        <div className="timer" ref={refContainerTimer}>
-          <div className="close" onClick={hendlerCloseTimer}>
-            <IoCloseSharp style={{ width: "100%", height: "100%" }} />
+          <Board
+            answers={answers}
+            isShakeRow={isShakeRow}
+            setIsShakeRow={setIsShakeRow}
+            isGameEnd={isGameEnd}
+          />
+          <KeyBoard
+            answers={answers}
+            setAnswers={setAnswers}
+            setIsShakeRow={setIsShakeRow}
+            isGameEnd={isGameEnd}
+          />
+          <div className="timer" ref={refContainerTimer}>
+            <div className="close" onClick={hendlerCloseTimer}>
+              <IoCloseSharp style={{ width: "100%", height: "100%" }} />
+            </div>
+            <div className="next-time" ref={refTimer}></div>
           </div>
-          <div className="next-time" ref={refTimer}></div>
         </div>
       </div>
     </AnswersContecst.Provider>
