@@ -69,5 +69,8 @@
  height: 100%;
 }
 .general-container.dark{
-  background-color: #c7cdce;
+  background-color: #080808;
+}
+.dark-theme{
+  color: #fff;
 }

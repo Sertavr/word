@@ -22,14 +22,14 @@ function App() {
 
   const [answers, setAnswers] = useState(initialAnswers);
 
-  const [isDark, setDark] = useState(true);
+  const [isDark, setDark] = useState(false);
 
   const [isShakeRow, setIsShakeRow] = useState(false);
   const [isGameEnd, setIsGameEnd] = useState(false);
 
   const refContainerTimer = useRef();
   const refGame = useRef();
-  const refTimer = useRef()
+  const refTimer = useRef();
 
   useEffect(() => {
     answers.forEach(({ row, completed }) => {
@@ -51,8 +51,8 @@ function App() {
   }, [isGameEnd]);
 
   const hendlerCloseTimer = () => {
-    refContainerTimer.current.style.display = 'none'
-  }
+    refContainerTimer.current.style.display = "none";
+  };
 
   const styleSun = {};
   styleSun.opacity =
@@ -62,9 +62,9 @@ function App() {
 
   return (
     <AnswersContecst.Provider value={answers}>
-      <div className={`general-container ${isDark ? 'dark' : ''}`}>
+      <div className={`general-container ${isDark ? "dark" : ""}`}>
         <div className="game" ref={refGame}>
-          <Header />
+          <Header darkTheme={isDark} />
           <Clouds isGameEnd={isGameEnd} />
 
           <BsFillSunFill
