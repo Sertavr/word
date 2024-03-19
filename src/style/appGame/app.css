@@ -64,8 +64,10 @@
   color: #461717ee;
 }
 .general-container{
- 
+ position: absolute;
+ width: 100%;
+ height: 100%;
 }
 .general-container.dark{
-  background-color: #202020;
+  background-color: #c7cdce;
 }
