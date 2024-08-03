@@ -11,6 +11,7 @@ const Row = ({
   index,
   refIDoNotKnow,
   refFewLetters,
+  isDark,
 }) => {
   const refRow = useRef(null);
 
@@ -24,7 +25,7 @@ const Row = ({
       index === indexCompl &&
       !words.includes(answers[indexCompl].row.join(""))
     ) {
-      if (answers[indexCompl].row.join('').length < 5) {
+      if (answers[indexCompl].row.join("").length < 5) {
         shake();
         refFewLetters.style.opacity = 1;
         setTimeout(() => (refFewLetters.style.opacity = 0), 2000);
@@ -59,7 +60,7 @@ const Row = ({
             index={ind}
             indexCompl={indexCompl}
             completed={completed}
-            className="obverse"
+            className={isDark ? "obverse dark-theme" : "obverse"}
             interval={100 + (ind % 5) * 700}
           />
           <Cell
@@ -67,7 +68,7 @@ const Row = ({
             index={ind}
             indexCompl={indexCompl}
             completed={completed}
-            className="reverse"
+            className={isDark ? "reverse dark-theme" : "reverse"}
             interval={100 + (ind % 5) * 700}
           />
         </div>

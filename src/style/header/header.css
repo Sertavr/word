@@ -13,4 +13,19 @@ header{
 }
 .header h1{
     font-size: 1.5rem;
+    text-align: center;
+}
+.header{
+    position: relative;
+    width: 100%;
+}
+.settings{
+    position: absolute;
+    font-size: 1.5rem;
+    z-index: 500;
+}
+.settings{
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
 }

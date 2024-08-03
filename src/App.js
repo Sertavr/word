@@ -22,7 +22,7 @@ function App() {
 
   const [answers, setAnswers] = useState(initialAnswers);
 
-  const [isDark, setDark] = useState(false);
+  const [isDark, setDark] = useState(true);
 
   const [isShakeRow, setIsShakeRow] = useState(false);
   const [isGameEnd, setIsGameEnd] = useState(false);
@@ -77,6 +77,7 @@ function App() {
             isShakeRow={isShakeRow}
             setIsShakeRow={setIsShakeRow}
             isGameEnd={isGameEnd}
+            isDark={isDark}
           />
           <KeyBoard
             answers={answers}
