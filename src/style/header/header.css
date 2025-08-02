@@ -1,31 +1,31 @@
-header{
- position: absolute;
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: #d3d6da;
-    top: 0;
-    left:0;
+header {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #d3d6da;
+  top: 0;
+  left: 0;
 }
-.header h1{
-    font-size: 1.5rem;
-    text-align: center;
+.header h1 {
+  font-size: 1.5rem;
+  text-align: center;
 }
-.header{
-    position: relative;
-    width: 100%;
+.header {
+  position: relative;
+  width: 100%;
 }
-.settings{
-    position: absolute;
-    font-size: 1.5rem;
-    z-index: 500;
+.settings {
+  position: absolute;
+  font-size: 1.5rem;
+  z-index: 500;
 }
-.settings{
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
+.settings {
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
 }

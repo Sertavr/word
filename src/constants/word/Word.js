@@ -5039,7 +5039,7 @@ const wodsYear = [
   "спека",
 ];
 
-const startDate = new Date("2024-02-02 00:00");
+const startDate = new Date("2025-02-02 00:00");
 const currentDate = new Date();
 const index = Math.trunc((currentDate - startDate) / (1000 * 60 * 60 * 24));
 const word = wodsYear.at(index);
